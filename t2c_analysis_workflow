@@ -1,0 +1,44 @@
+# reading hicup file
+# file<-c("PATH/TO/FILE.txt")
+# coord<-c(7,110901160,111101971) #- vector with three elements c(chrom, start, end) // c(7, 110901160, 111101971)
+
+# input file is reference genome cut with a chosen enzyme using Hicup
+# regions.m<-read.hicup(file,coord)
+
+# reading homer file with tags
+# fn<-("PATH/TO/FILE/tags.tsv")
+# coord - vector with three elements c(chrom, start, end) // c(7, 110901160, 111101971)
+# output :
+# chr7 3188777 chr7  17687771   40
+# chr7 3238844 chr7  27313134   62
+# chr7 3238846 chr7  27313134   25
+
+# bgmodel.m<-read.homer(fn,coord)
+
+# basic.interaction.matrix.m<-inter.matrix(bgmodel.m)
+
+# rows.m<-row.sum(regions.m,basic.interaction.matrix.m)
+
+# cols.m<-col.sum(regions.m,basic.interaction.matrix.m,rows.m)
+
+# macierz_raw.m<-make.bins(regions.m,basic.interaction.matrix.m)
+
+# macierz.do.normalizacji.m<-norm.param(macierz_raw.m)
+
+# znormalizowana<-normalization(macierz_raw.m,macierz.do.normalizacji.m)
+
+# input normalized matrix from normalization and regions from read.hicup
+# output extended matrix for heatmap
+
+# macierz_rozwinieta.m<-extending.matrix(znormalizowana,regions.m)
+
+## truncate matrix to the highest value of 0.25
+
+# obcieta<-truncate.matrix(macierz_rozwinieta.m,limit=0.2)
+
+# prepare dataframe of zeros to cover background in heatmap3
+
+# black_cells<-blackout_cells(obcieta)
+
+
+# plot_results(obcieta,title=c("T2C brain"),black_cells)
