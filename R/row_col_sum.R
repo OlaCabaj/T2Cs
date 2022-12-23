@@ -1,3 +1,5 @@
+# Returns sums of row and column tags
+
 row_sum <- function(regs, bgcov){
   rows <- integer()
   for( j in 1:nrow(regs) ){

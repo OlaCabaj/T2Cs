@@ -1,3 +1,12 @@
+#' Reads in a Hicup file cut with restriction enzyme
+#'
+#' @param fn path to file and filename of a reference genome cut by restriction enzyme using Hicup.
+#' @param coord A vector with three elements c(chrom, start, end) like c(7, 110901160, 111101971).
+#' @return A data frame of regions between cuts made by the restriction enzyme.
+#' @examples
+#' -
+##
+
 # input file is reference genome cut with a chosen enzyme using Hicup
 read_hicup <- function(fn, coord){
   if(missing(coord)) stop('Chromosome coordinates missing')

@@ -1,3 +1,11 @@
+#' Generating a basic contact matrix from HOMER tags file
+#'
+#' @param bgmodel A HOMER tags file read in by read_homer().
+#' @return A basic contact (interaction) matrix.
+#' @examples
+#' -
+##
+
 inter_matrix <- function(bgmodel){
 
   if(missing(bgmodel)) stop('Where is the input ?')
