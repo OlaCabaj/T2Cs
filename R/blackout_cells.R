@@ -1,0 +1,13 @@
+# prepare dataframe of zeros to cover background for visualization in heatmap3
+blackout_cells<-function(obcieta){
+  if(missing(obcieta)) stop('missing obcieta')
+  if(!'obcieta' %in% class(obcieta)) stop('wrong class of obcieta')
+  coor<-which(obcieta==0,arr.ind=T)
+  cor<-which(lower.tri(obcieta,diag=F)==F,arr.ind=T)
+  coord1<-rbind(coor,cor)
+  colorbl<-rep("black",times=nrow(coor))
+  colorwh<-rep("white",times=nrow(cor))
+  colordf<-append(colorbl,colorwh)
+  cells<-data.frame(coord1,colordf)
+  return(cells)
+}

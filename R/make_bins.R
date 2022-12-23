@@ -1,0 +1,13 @@
+make_bins <- function(regions, inter_matrix){
+
+  if(missing(regions)) stop('regions missing')
+  if(missing(inter_matrix)) stop('missing inter_matrix')
+  if(!'hicup' %in% class(regions)) stop('wrong class of regions - yes we are checking it too')
+  if(!'raw.inter' %in% class(inter_matrix)) stop('wrong class of inter_matrix - yes we are checking it too')
+
+  row_summary <- row.sum(regions, inter_matrix)
+  col_summary <- col.sum(regions, inter_matrix, row_summary)
+
+  attr(col_summary, 'class') <- c(class(col_summary), 'rawbins')
+  return(col_summary)
+}
