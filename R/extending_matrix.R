@@ -5,9 +5,9 @@ extending_matrix <- function(normalized, regions){
 
   # tests
   if(missing(normalized)) stop('missing normalized')
-  if(!'normalized' %in% class(normalized)) stop('wrong class of normalized - yes we are checking it too')
+  if(!'normalized' %in% class(normalized)) stop('wrong class of normalized')
   if(missing(regions)) stop('missing regions')
-  if(!'hicup' %in% class(regions)) stop('wrong class of regions - yes we are checking it too')
+  if(!'hicup' %in% class(regions)) stop('wrong class of regions')
 
   # extending parameters
   reg_diff <- regions[,2] - regions[,1]
