@@ -1,6 +1,6 @@
 # input normalized matrix from normalization and regions from read.hicup
 # output extended matrix for heatmap
-
+#' @export
 extending_matrix <- function(normalized, regions){
 
   # tests
