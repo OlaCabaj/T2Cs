@@ -2,6 +2,7 @@
 
 export(blackout_cells)
 export(col_sum)
+export(extending_matrix)
 export(extending_rows)
 export(inter_matrix)
 export(make_bins)
