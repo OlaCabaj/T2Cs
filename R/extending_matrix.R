@@ -15,8 +15,8 @@ extending_matrix <- function(normalized, regions){
   params <- round(reg_diff/min_diff, 0)
 
   # extending rows
-  ext_row <- extending.rows(normalized, params)
-  ext_col <- extending.cols(ext_row, params)
+  ext_row <- extending_rows(normalized, params)
+  ext_col <- extending_cols(ext_row, params)
 
   # add class
   attr(ext_col, 'class') <- c(class(ext_col), 'extended.matrix')

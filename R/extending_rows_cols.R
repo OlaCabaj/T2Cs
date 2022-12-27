@@ -13,7 +13,7 @@ extending_rows <- function(normalized,param){
   return(ext_row)
 }
 
-
+#' @export
 extending_cols <-function(ext_row,param){
   cols2a<-numeric()
   for(i in 1:length(ext_row[1,])){
