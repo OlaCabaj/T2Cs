@@ -24,22 +24,22 @@ fn<-("PATH/TO/FILE/tags.tsv")
  cols.m<-col.sum(regions.m,basic.interaction.matrix.m,rows.m)
 
 # creating bins
- macierz_raw.m<-make.bins(regions.m,basic.interaction.matrix.m)
+ matrix_raw_m<-make.bins(regions.m,basic.interaction.matrix.m)
 
 # preparing the matrix for normalization
- macierz.do.normalizacji.m<-norm.param(macierz_raw.m)
+ matrix_to_normalize<-norm.param(matrix_raw_m)
 
 # value normalization
- znormalizowana<-normalization(macierz_raw.m,macierz.do.normalizacji.m)
+ normalized_m<-normalization(matrix_raw_m,matrix_to_normalize)
 
 # extending the matrix to full resolution
- macierz_rozwinieta.m<-extending.matrix(znormalizowana,regions.m)
+ extended_m<-extending.matrix(normalized_m,regions.m)
 
 # truncate matrix to the highest value of 0.25
-obcieta<-truncate.matrix(macierz_rozwinieta.m,limit=0.25)
+truncated_m<-truncate.matrix(extended_m,limit=0.25)
 
 # prepare dataframe of zeros to cover background in heatmap3
-black_cells<-blackout_cells(obcieta)
+black_cells<-blackout_cells(truncated_m)
 
 # plots a heatmap of the contact matrix
-plot_results(obcieta,title=c("T2C brain"),black_cells)
+plot_results(truncated_m,title=c("T2C brain"),black_cells)
