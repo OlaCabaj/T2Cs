@@ -19,5 +19,6 @@ plot_results<-function(truncated_m, title = c("T2C results"), black_cells, color
   heatmap_t2c <- heatmap3::heatmap3(as.matrix(truncated_m*(upper.tri(truncated_m,diag=TRUE))),
                                     Rowv=NA, Colv=NA, col=rainbows, symm=TRUE, main=title,
                                     colorCell=black_cells, labRow = FALSE, labCol = FALSE)
-  return(heatmap_t2c)
+  return(invisible(heatmap_t2c))
 }
+
