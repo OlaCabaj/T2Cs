@@ -1,14 +1,14 @@
 # T2Cs
 
 ## Example of a pipeline
-### \# reading hicup file
+#### \# reading hicup file
 #### file<-c("PATH/TO/FILE.txt")
 #### coord<-c(7,110901160,111101971) #- vector with three elements c(chrom, start, end) // c(7, 110901160, 111101971)
 
-### \# input file is a reference genome cut with a chosen enzyme using Hicup
+#### \# input file is a reference genome cut with a chosen enzyme using Hicup
 #### regions.m<-read.hicup(file,coord)
 
-### \# reading homer file with tags
+#### \# reading homer file with tags
 #### fn<-("PATH/TO/FILE/tags.tsv")
 #### \# coord - vector with three elements c(chrom, start, end) // c(7, 110901160, 111101971)
 ##### \# output :
@@ -16,7 +16,7 @@
 ##### \# chr7 3238844 chr7  27313134   62
 ##### \# chr7 3238846 chr7  27313134   25
 
-### \# reading HOMER tags
+#### \# reading HOMER tags
 #### bgmodel.m<-read.homer(fn,coord)
 
 #### \# creating a basin interaction matrix
