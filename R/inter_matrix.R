@@ -5,7 +5,7 @@
 #' @examples
 #' -
 ##
-
+#' @export
 inter_matrix <- function(bgmodel){
 
   if(missing(bgmodel)) stop('Where is the input ?')

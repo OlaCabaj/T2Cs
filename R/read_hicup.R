@@ -6,7 +6,7 @@
 #' @examples
 #' -
 ##
-
+#' @export
 # input file is reference genome cut with a chosen enzyme using Hicup
 read_hicup <- function(fn, coord){
   if(missing(coord)) stop('Chromosome coordinates missing')

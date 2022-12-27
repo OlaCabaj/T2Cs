@@ -6,6 +6,7 @@
 #' @examples
 #' -
 ##
+#' @export
 
 read_homer <- function(fn, coord){
 

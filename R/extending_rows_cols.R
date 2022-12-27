@@ -1,3 +1,5 @@
+# extending rows and columns to final size
+#' @export
 extending_rows <- function(normalized,param){
   ext_row<-numeric()
   for(i in 1:nrow(normalized)) {

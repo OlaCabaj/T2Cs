@@ -5,11 +5,11 @@
 #' @examples
 #' -
 ##
-
+#' @export
 norm_param <-function(bins){
 
   if(missing(bins)) stop('missing bins')
-  if(!'rawbins' %in% class(bins)) stop('wrong class of bins - yes we are checking it too')
+  if(!'rawbins' %in% class(bins)) stop('wrong class of bins')
 
 
   reads_sums <- numeric(nrow(bins))

@@ -4,13 +4,14 @@
 #' @param limit A number to which limit the matrix to.
 #' @return A finished, axtended contact matrix which is used as an input to blackout_cells() and plot_results().
 #' @examples
-#' obcieta <- truncate_matrix(extended_matrix, limit = 0.2)
+#' truncated_m <- truncate_matrix(extended_matrix, limit = 0.2)
 ##
+#' @export
 truncate_matrix <- function(ext_matrix, limit=0.25){
   limit <- limit * max(ext_matrix)
   ext_matrix[ext_matrix >= limit] <- limit
 
   # add class
-  attr(ext_matrix, 'class') <- c(class(ext_matrix), 'obcieta')
+  attr(ext_matrix, 'class') <- c(class(ext_matrix), 'truncated_m')
   return(ext_matrix)
 }

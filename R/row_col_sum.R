@@ -1,9 +1,9 @@
 # Returns sums of row and column tags
-
+#' @export
 row_sum <- function(regs, bgcov){
   rows <- integer()
   for( j in 1:nrow(regs) ){
-    g <- integer( ncol(bgcov) ) # I hope so
+    g <- integer( ncol(bgcov) )
     nms <- rownames(bgcov)
     for( i in 1:nrow(bgcov) ) {
       if(nms[i]>=regs[j,1])
