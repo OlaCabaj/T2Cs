@@ -16,6 +16,7 @@ row_sum <- function(regs, bgcov){
   return(rows)
 }
 
+#' @export
 col_sum <- function(regs, bgcov, rows){
   cols<-numeric()
   for(j in 1:length(regs[,1])){
