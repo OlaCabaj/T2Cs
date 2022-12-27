@@ -1,4 +1,4 @@
-# Returns sums of row and column tags
+# Returns sums of row and column tags in provided regions
 #' @export
 row_sum <- function(regs, bgcov){
   rows <- integer()
@@ -6,8 +6,8 @@ row_sum <- function(regs, bgcov){
     g <- integer( ncol(bgcov) )
     nms <- rownames(bgcov)
     for( i in 1:nrow(bgcov) ) {
-      if(nms[i]>=regs[j,1])
-        if(nms[i]<=regs[j,2])
+      if(as.integer(nms[i])>=regs[j,1])
+        if(as.integer(nms[i])<=regs[j,2])
           g <- g+bgcov[i,]
 
     }
@@ -23,8 +23,8 @@ col_sum <- function(regs, bgcov, rows){
     g1 <- integer(nrow(rows))
     nms <- rownames(bgcov)
     for(i in 1:ncol(rows)) {
-      if(nms[i]>=regs[j,1])
-        if(nms[i]<=regs[j,2])
+      if(as.integer(nms[i])>=regs[j,1])
+        if(as.integer(nms[i])<=regs[j,2])
           g1<-g1+rows[,i]
     }
     cols<-cbind(cols,g1)
