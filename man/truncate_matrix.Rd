@@ -18,5 +18,5 @@ A finished, axtended contact matrix which is used as an input to blackout_cells(
 Limit matrix values to the chosen value
 }
 \examples{
-obcieta <- truncate_matrix(extended_matrix, limit = 0.2)
+truncated_m <- truncate_matrix(extended_matrix, limit = 0.2)
 }
