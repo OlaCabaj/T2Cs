@@ -1,7 +1,7 @@
 # T2Cs
 
 ## Example of a pipeline
-'''
+```
 #### \# reading hicup file
 #### file<-c("PATH/TO/Digest_musmus9_HindIII_None.txt")
 #### coord<-c(7,110901160,111101971) #- vector with three elements c(chrom, start, end) // c(7, 110901160, 111101971)
@@ -47,7 +47,7 @@
 
 #### \# plots a heatmap of the contact matrix
 #### plot_results(truncated_m,title=c("T2C brain"),black_cells)
-'''
+```
 
 ## \#Raw data comes from:
 ### \# Kolovos, P., van de Werken, H.J., Kepper, N. et al. Targeted Chromatin Capture (T2C): a novel high resolution high throughput method to detect genomic interactions and regulatory elements. Epigenetics & Chromatin 7, 10 (2014). https://doi.org/10.1186/1756-8935-7-10
