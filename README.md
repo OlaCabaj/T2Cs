@@ -2,14 +2,14 @@
 
 ## Example of a pipeline
 #### \# reading hicup file
-#### file<-c("PATH/TO/FILE.txt")
+#### file<-c("PATH/TO/Digest_musmus9_HindIII_None.txt")
 #### coord<-c(7,110901160,111101971) #- vector with three elements c(chrom, start, end) // c(7, 110901160, 111101971)
 
 #### \# input file is a reference genome cut with a chosen enzyme using Hicup
 #### regions.m<-read_hicup(file,coord)
 
 #### \# reading homer file with tags
-#### fn<-("PATH/TO/FILE/tags.tsv")
+#### fn<-("PATH/TO/FILE/chr7.tags.tsv")
 #### \# coord - vector with three elements c(chrom, start, end) // c(7, 110901160, 111101971)
 ##### \# output :
 ##### \# chr7 3188777 chr7  17687771   40
