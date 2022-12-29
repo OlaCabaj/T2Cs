@@ -2,19 +2,16 @@
 % Please edit documentation in R/inter_matrix.R
 \name{inter_matrix}
 \alias{inter_matrix}
-\title{Generating a basic contact matrix from HOMER tags file}
+\title{Generating a basic interaction matrix containing raw interaction  counts in provided regions}
 \usage{
 inter_matrix(bgmodel)
 }
 \arguments{
-\item{bgmodel}{A HOMER tags file read in by read_homer().}
+\item{bgmodel}{A HOMER tags file read in by \code{read_homer} function.}
 }
 \value{
-A basic contact (interaction) matrix.
+A basic contact (interaction) matrix of class \code{raw.inter}.
 }
 \description{
-Generating a basic contact matrix from HOMER tags file
-}
-\examples{
--
+Generating a basic interaction matrix containing raw interaction  counts in provided regions
 }

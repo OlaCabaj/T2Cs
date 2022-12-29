@@ -2,7 +2,7 @@
 % Please edit documentation in R/read_homer.R
 \name{read_homer}
 \alias{read_homer}
-\title{Reads in HOMER tags file}
+\title{Reads in HOMER tags file, creates a data frame containing reads in a region of interest}
 \usage{
 read_homer(fn, coord)
 }
@@ -12,11 +12,8 @@ read_homer(fn, coord)
 \item{coord}{A vector with three elements c(chrom, start, end) like c(7, 110901160, 111101971).}
 }
 \value{
-A cleaned-up data frame of HOMER tags.
+A cleaned-up data frame of HOMER tags in a region of interest.
 }
 \description{
-Reads in HOMER tags file
-}
-\examples{
--
+Reads in HOMER tags file, creates a data frame containing reads in a region of interest
 }

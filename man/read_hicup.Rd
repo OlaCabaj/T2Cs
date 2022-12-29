@@ -2,21 +2,18 @@
 % Please edit documentation in R/read_hicup.R
 \name{read_hicup}
 \alias{read_hicup}
-\title{Reads in a Hicup file cut with restriction enzyme}
+\title{Reads in a Hicup file containing  cut with restriction enzyme to prepare a data frame containing positions of restriction enzyme cuts in a provided region}
 \usage{
 read_hicup(fn, coord)
 }
 \arguments{
 \item{fn}{path to file and filename of a reference genome cut by restriction enzyme using Hicup.}
 
-\item{coord}{A vector with three elements c(chrom, start, end) like c(7, 110901160, 111101971).}
+\item{coord}{A vector of a region of interest with three elements c(chrom, start, end) like c(7, 110901160, 111101971).}
 }
 \value{
-A data frame of regions between cuts made by the restriction enzyme.
+A data frame of cuts made by the restriction enzyme.
 }
 \description{
-Reads in a Hicup file cut with restriction enzyme
-}
-\examples{
--
+Reads in a Hicup file containing  cut with restriction enzyme to prepare a data frame containing positions of restriction enzyme cuts in a provided region
 }
