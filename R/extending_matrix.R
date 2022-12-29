@@ -1,5 +1,10 @@
-# input normalized matrix from normalization and regions from read.hicup
-# output extended matrix for heatmap
+#' Generate an extended matrix for visualization where rows and columns are extended proportionally to the shortest restriction fragment
+#' 
+#' @param normalized matrix from \code{normalization} function and 
+#' regions from \code{read.hicup} function
+#' @param regions output of \code{read_hicup} function - object of class \code{hicup}
+#' 
+#' @return extended matrix of class \code{extended.matrix} for heatmap
 #' @export
 extending_matrix <- function(normalized, regions){
 
@@ -10,9 +15,9 @@ extending_matrix <- function(normalized, regions){
   if(!'hicup' %in% class(regions)) stop('wrong class of regions')
 
   # extending parameters
-  reg_diff <- regions[,2] - regions[,1]
+  reg_diff <- regions[, 2] - regions[, 1]
   min_diff <- min(reg_diff)
-  params <- round(reg_diff/min_diff, 0)
+  params <- round(reg_diff / min_diff, 0)
 
   # extending rows
   ext_row <- extending_rows(normalized, params)
