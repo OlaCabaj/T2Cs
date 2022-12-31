@@ -9,7 +9,7 @@ inter_matrix <- function(bgmodel){
   
   # tests
   if(missing(bgmodel)) stop('Where is the input ?')
-  if(!'homer'%in%class(bgmodel)) stop('Homer class required - result from read.homer')
+  if(!'homer' %in% class(bgmodel)) stop('Homer class required - result from read.homer')
 
   crd_x <- sort(unique(bgmodel[, 2]))
   crd_y <- sort(unique(bgmodel[, 4]))

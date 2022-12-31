@@ -22,8 +22,8 @@ read_homer <- function(fn, coord){
   # chr7 3238846 chr7  27313134   25
   bgmodel <- cbind(tags[, 2:3], tags[, 7:8], tags[, 5])
   # fix chrom name
-  bgmodel[,1] <- gsub("^chr", "", bgmodel[,1])
-  bgmodel[,3] <- gsub("^chr", "", bgmodel[,3])
+  bgmodel[, 1] <- gsub("^chr", "", bgmodel[, 1])
+  bgmodel[, 3] <- gsub("^chr", "", bgmodel[, 3])
 
   coord <- as.integer(coord)
 

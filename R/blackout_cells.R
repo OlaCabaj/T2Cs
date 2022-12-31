@@ -7,7 +7,7 @@ blackout_cells<-function(truncated_m){
   if(missing(truncated_m)) stop('missing truncated_m')
   if(!'truncated_m' %in% class(truncated_m)) stop('wrong class of truncated_m')
   coor <- which(truncated_m == 0, arr.ind = TRUE)
-  cor <- which(lower.tri(truncated_m,diag = FALSE) == FALSE, arr.ind = TRUE)
+  cor <- which(lower.tri(truncated_m, diag = FALSE) == FALSE, arr.ind = TRUE)
   coord1 <- rbind(coor, cor)
   colorbl <- rep("black", times = nrow(coor))
   colorwh <- rep("white", times = nrow(cor))

@@ -10,7 +10,10 @@
 #' @export
 #' @importFrom heatmap3 heatmap3
 #' @importFrom grDevices colorRampPalette
-plot_results <- function(truncated_m, black_cells, title = "T2C results", colors_palette = c("blue","deepskyblue2","green","yellow","orange","red","red3")) {
+plot_results <- function(
+    truncated_m,
+    black_cells,
+    title = "T2C results", colors_palette = c("blue","deepskyblue2","green","yellow","orange","red","red3")) {
 
   # tests
   if(missing(truncated_m)) stop('missing truncated_m')

@@ -7,7 +7,7 @@ extending_rows <- function(normalized, param) {
       colstemp <- rbind(colstemp, normalized[i, ])
       if (nrow(colstemp) == param[i]) break
     }
-    ext_row<-rbind(ext_row, colstemp)
+    ext_row <- rbind(ext_row, colstemp)
   }
 
   return(ext_row)
